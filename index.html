@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- 文字コードはUTF-8を指定 -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- noindex -->
+    <meta name="robots" content="noindex" />
+    <!-- レスポンシブ表示の記述 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- サイトのタイトル記述 -->
+    <title>Sample</title>
+    <!-- サイトの概要を記述 -->
+    <meta name="description" content="sample" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- wow -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css"
+    />
+    <!-- swiper  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- スタイルシートを記述(headタグの直前) -->
+    <link rel="stylesheet" href="./css/destyle.css" />
+    <!-- 読み込み順はresetが上 -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "xgq6iqm",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#"><img src="./img/header-logo.png" alt="logo" /></a>
+        </h1>
+        <nav class="header__nav">
+          <a href="#concept" class="header__link"
+            >CONCEPT<span>コンセプト</span></a
+          >
+          <a href="#service" class="header__link"
+            >SERVICE<span>事業内容</span></a
+          >
+          <a href="#works" class="header__link">WORKS<span>制作実績</span></a>
+          <a href="#design" class="header__link"
+            >EX.DESIGN<span>デザイン事例</span></a
+          >
+          <a href="#blog" class="header__link">BLOG<span>ブログ</span></a>
+        </nav>
+        <div class="header__tel">
+          03-1234-5678<span>平日10：00～18：00</span>
+        </div>
+        <div class="header__contact">
+          <div class="header__contact-top">
+            <img src="./img/header-contact.png" loading="lazy" alt="contact" />
+          </div>
+          <a href="#" class="header__contact-bottom">
+            <span>お問い合わせ</span>
+          </a>
+        </div>
+        <button id="js-drawer-icon" class="header__open drawer-icon">
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="js-drawer-content" class="drawer-content">
+      <nav class="drawer-content__menu">
+        <a href="#concept" class="drawer-content__link">CONCEPT</a>
+        <a href="#service" class="drawer-content__link">SERVICE</a>
+        <a href="#works" class="drawer-content__link">WORKS</a>
+        <a href="#blog" class="drawer-content__link">BLOG</a>
+      </nav>
+    </div>
+
+    <!-- mv -->
+    <div class="mv">
+      <div class="mv__inner">
+        <div class="mv__body">
+          <p class="mv__title">
+            <span>法人集客にフォーカスした</span>
+            <br />
+            <span> ホームページ制作のご提案を。</span>
+          </p>
+          <p class="mv__sub-title">デザイン力×集客力で結果に繋げる</p>
+          <div class="mv__buttons">
+            <a href="#" class="mv__button-left">
+              03-1234-5678<span>平日10：00～18：00</span>
+            </a>
+            <a href="#" class="mv__button-right">お問い合わせ</a>
+          </div>
+        </div>
+        <div class="scroll">
+          <p>scroll</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- news -->
+    <div class="news">
+      <div class="news__inner">
+        <a href="#" class="news__wrapper">
+          <p class="news__left">NEWS</p>
+          <div class="news__right">
+            <p class="news__date">2020/00/00</p>
+            <p class="news__title">
+              タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- concept -->
+    <section id="concept" class="concept">
+      <div class="concept__inner inner">
+        <div class="concept__wrapper">
+          <div class="concept__left wow fadeInUp" data-wow-delay=".3s">
+            <img
+              src="./img/concept-image.png"
+              loading="lazy"
+              alt="concept-image"
+            />
+          </div>
+          <div class="concept__right wow fadeInUp" data-wow-delay=".4s">
+            <div class="concept__title1">高クオリティのホームページを</div>
+            <div class="concept__title2">お手頃価格でご提供</div>
+            <p class="concept__cost">平均受注単価：<span>45～65</span>万円</p>
+          </div>
+        </div>
+        <div class="concept__bottom wow fadeInUp" data-wow-delay=".3s">
+          <p class="concept__text">
+            弊社は少数精鋭で制作を進めていくため、大手の制作会社と遜色ない高クオリティなホームページを低コストで制作できます。デザインからコーディング・開発まで基本的に全ての工程を自社内で行うため、無駄な中間コストがかかりません。またデザインが良いだけでなく、集客に繋がるようなご提案をいたします。
+          </p>
+        </div>
+        <div class="concept__link wow fadeInUp" data-wow-delay=".3s">
+          <a href="#">詳しく見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- feature -->
+    <section id="feature" class="feature">
+      <div class="feature__inner inner">
+        <div class="feature__wrapper">
+          <div class="feature__left wow fadeInUp" data-wow-delay=".3s">
+            <p class="feature__sub-title">他の制作会社様との違い</p>
+            <h2 class="feature__title">LOGOの3つの特徴</h2>
+            <p class="feature__text">
+              集客に特化したクオリティの高いデザインを安価な制作費用でご提供します。
+            </p>
+          </div>
+          <div class="feature__right">
+            <div class="feature__right-item wow fadeInUp" data-wow-delay=".3s">
+              <p class="feature__right-item-left">01</p>
+              <div class="feature__right-item-right-body">
+                <h3 class="feature__right-item-right-body-title">
+                  集客を最優先
+                </h3>
+                <p class="feature__right-item-right-body-text">
+                  特徴についての文章特徴についての文章特徴についての文章特徴についての文章特徴についての文章
+                </p>
+              </div>
+            </div>
+            <div
+              class="feature__right-item feature__right-item2 wow fadeInUp"
+              data-wow-delay=".3s"
+            >
+              <p class="feature__right-item-left">02</p>
+              <div class="feature__right-item-right-body">
+                <h3 class="feature__right-item-right-body-title">
+                  安価な制作費用
+                </h3>
+                <p class="feature__right-item-right-body-text">
+                  特徴についての文章特徴についての文章特徴についての文章特徴についての文章特徴についての文章
+                </p>
+              </div>
+            </div>
+            <div
+              class="feature__right-item feature__right-item3 wow fadeInUp"
+              data-wow-delay=".3s"
+            >
+              <p class="feature__right-item-left">03</p>
+              <div class="feature__right-item-right-body">
+                <h3 class="feature__right-item-right-body-title">
+                  戦略的なデザイン
+                </h3>
+                <p class="feature__right-item-right-body-text">
+                  特徴についての文章特徴についての文章特徴についての文章特徴についての文章特徴についての文章
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- service -->
+    <section id="service" class="service">
+      <div class="service__inner inner">
+        <h2 class="service__title">WEB集客をトータルサポート</h2>
+        <p class="service__lead">
+          デザインからコーディング・開発まで基本的に全ての工程を自社内で行うため、無駄な中間コストがかかりません。またデザインが良いだけでなく、集客に繋がるようなご提案をいたします。
+        </p>
+        <div class="service__wrapper">
+          <div class="service__item wow fadeInUp" data-wow-delay=".3s">
+            <div class="service__image">
+              <img
+                src="./img/service-image1.png"
+                loading="lazy"
+                alt="service-image1"
+              />
+            </div>
+            <p class="service__text">
+              事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章
+            </p>
+            <div class="service__link">
+              <a href="#">詳しく見る</a>
+            </div>
+          </div>
+          <div class="service__item wow fadeInUp" data-wow-delay=".4s">
+            <div class="service__image">
+              <img
+                src="./img/service-image2.png"
+                loading="lazy"
+                alt="service-image2"
+              />
+            </div>
+            <p class="service__text">
+              事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章
+            </p>
+            <div class="service__link">
+              <a href="#">詳しく見る</a>
+            </div>
+          </div>
+          <div class="service__item wow fadeInUp" data-wow-delay=".5s">
+            <div class="service__image">
+              <img
+                src="./img/service-image3.png"
+                loading="lazy"
+                alt="service-image3"
+              />
+            </div>
+            <p class="service__text">
+              事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章
+            </p>
+            <div class="service__link">
+              <a href="#">詳しく見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- works -->
+    <h2 id="works" class="section__head inner">
+      <p class="section__head-main">WEB集客をトータルサポート</p>
+      <p class="section__head-sub">
+        BtoBのコーポレートサイトを中心に様々なWEBサイトの制作実績がございます。集客に繋がるデザインで御社の売上UPに貢献する提案をします。
+      </p>
+    </h2>
+    <div class="swiper-container">
+      <div class="swiper">
+        <div class="swiper-wrapper wow fadeInUp" data-wow-delay=".3s">
+          <div class="swiper-slide">
+            <img src="./img/works-image1.png" alt="works-image1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/works-image2.png" alt="works-image2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/works-image3.png" alt="works-image3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/works-image1.png" alt="works-image1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/works-image2.png" alt="works-image2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/works-image3.png" alt="works-image3" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-card">
+        <h3 class="swiper-title">下倉架空税理士事務所 様</h3>
+        <div class="swiper-txt">
+          <p class="swiper-text">
+            ろご区にある税理士事務所のコーポレートサイト。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。
+          </p>
+        </div>
+        <div class="swiper__link1">
+          <a href="#">詳しく見る</a>
+        </div>
+        <div class="swiper__link2">
+          <a href="#">デザインから別の事例を探す</a>
+        </div>
+      </div>
+      <div class="swiper-button">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <!-- blog -->
+    <div id="blog" class="blog">
+      <div class="blog__inner">
+        <div class="blog__items">
+          <a href="#" class="blog__item wow fadeInUp" data-wow-delay=".3s">
+            <p class="blog__date">2020/00/00</p>
+            <p class="blog__title">
+              タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク
+            </p>
+          </a>
+          <a href="#" class="blog__item wow fadeInUp" data-wow-delay=".3s">
+            <p class="blog__date">2020/00/00</p>
+            <p class="blog__title">
+              タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク
+            </p>
+          </a>
+          <a href="#" class="blog__item wow fadeInUp" data-wow-delay=".3s">
+            <p class="blog__date">2020/00/00</p>
+            <p class="blog__title">
+              タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク
+            </p>
+          </a>
+          <a href="#" class="blog__item wow fadeInUp" data-wow-delay=".3s">
+            <p class="blog__date">2020/00/00</p>
+            <p class="blog__title">
+              タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div class="contact">
+      <div class="contact__inner inner">
+        <p class="contact__text wow fadeInUp" data-wow-delay=".3s">
+          お気軽にお問い合わせください！<br />
+          サクッと概算見積書を作成します
+        </p>
+        <div class="mv__buttons mv__buttons2">
+          <a href="#" class="mv__button-left wow fadeInUp" data-wow-delay=".3s">
+            03-1234-5678<span>平日10：00～18：00</span>
+          </a>
+          <a href="#" class="mv__button-right wow fadeInUp" data-wow-delay=".3s"
+            >お問い合わせ</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="footer__inner inner">
+        <h2 class="footer__logo">
+          <img src="./img/footer-logo.png" loading="lazy" alt="footer-logo" />
+        </h2>
+        <p class="adress">
+          〒123-456<br class="pc-hidden" />東京都架空区架空1-1-1<br
+            class="pc-hidden"
+          />KAKUビル2F
+        </p>
+        <p class="copyright">© Copyright LOGO All rights reserved.</p>
+      </div>
+    </div>
+
+    <!-- js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
